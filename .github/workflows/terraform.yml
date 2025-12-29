@@ -84,7 +84,13 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
+      env:
+        ARM_CLIENT_ID: ${{ raB8Q~97wjfVon~.~gFVsvz8DwDegy1pbozQVcpf }}
+        ARM_CLIENT_SECRET: ${{ 706f5b2d-4e1d-4a68-8d2b-dcd417dcdb53 }}
+        ARM_TENANT_ID: ${{ cca32a50-2d76-45b8-8645-e5620a621055 }}
+        ARM_SUBSCRIPTION_ID: ${{ 8b0422c9-d3b4-4ad5-b676-1cd162a61f87 }}
       run: terraform plan -input=false
+    
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
